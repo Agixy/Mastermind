@@ -27,6 +27,12 @@ namespace GameLibrary
             _riddle = new ReadOnlyCollection<int>(riddleList);
         }
 
+        /// <summary>
+        /// Checks, if bet was right, if not, how near it was
+        /// </summary>
+        /// <param name="bet">Game bet in form of 4 digits from range 0..8</param>
+        /// <param name="result">String, specifing, how near the bet is </param>
+        /// <returns>True, if bet was right, otherwise falce</returns>
         public bool Guess(string bet, out string result)
         {
             ++Result;
